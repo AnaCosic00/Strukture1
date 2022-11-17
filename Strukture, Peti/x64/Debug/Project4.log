@@ -1,0 +1,3 @@
+﻿  Strukture,Peti.c
+C:\Users\Ana Marija\Desktop\Projects\Project4\Strukture,Peti.c(117,15): warning C4047: 'return': 'position' differs in levels of indirection from 'int'
+  Project4.vcxproj -> C:\Users\Ana Marija\Desktop\Projects\Project4\x64\Debug\Project4.exe
