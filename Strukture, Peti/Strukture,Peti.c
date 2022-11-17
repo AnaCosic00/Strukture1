@@ -13,7 +13,7 @@ typedef struct _Stog {
 	position next;
 } Stog;
 
-int CitanjeIzDatoteke(double*, char*);
+int IzracunajRezultat(double*, char*);
 int Push(position, double);
 position StvoriNoviElement(double);
 int UmetniNakon(position, position);
@@ -23,7 +23,7 @@ int IzbrisiNakon(position);
 
 int main() {
 	double rezultat = 0;
-	if (CitanjeIzDatoteke(&rezultat, "postfix.txt") == EXIT_SUCCESS)
+	if (IzracunajRezultat(&rezultat, "postfix.txt") == EXIT_SUCCESS)
 	{
 		printf("Rezultat: %0.1lf", rezultat);
 	}
@@ -36,7 +36,7 @@ int main() {
 	
 }
 
-int CitanjeIzDatoteke(double* rezultat, char* ime_datoteke) {
+int IzracunajRezultat(double* rezultat, char* ime_datoteke) {
 	
 	char buffer[MAX_LINE] = { 0 };
 	int pomak = 0;
