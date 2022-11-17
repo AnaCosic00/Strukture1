@@ -81,17 +81,6 @@ int IzracunajRezultat(double* rezultat, char* ime_datoteke) {
 		return ERROR;
 	}
 
-	if (head.next)
-	{
-		printf("Greska s postfixom!");
-
-		while (head.next)
-		{
-			IzbrisiNakon(&head);
-		}
-		return ERROR;
-	}
-
 	return EXIT_SUCCESS;
 
 }
