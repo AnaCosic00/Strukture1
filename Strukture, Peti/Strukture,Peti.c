@@ -74,7 +74,7 @@ int IzracunajRezultat(double* rezultat, char* ime_datoteke) {
 	status = Pop(rezultat, &head);
 	if (status != EXIT_SUCCESS)
 	{
-		while (head.next)
+		while (head.next != NULL)
 		{
 			IzbrisiNakon(&head);
 		}
@@ -102,7 +102,7 @@ position StvoriNoviElement(double br)
 	novi_element = (position)malloc(sizeof(Stog));
 	if (!novi_element)
 	{
-		printf("Can't allocate memory!\n");
+		printf("Memorija nije alocirana!\n");
 		return ERROR;
 	}
 	novi_element->broj = br;
@@ -127,13 +127,13 @@ int IzvrsiOperaciju(position head, char operacija) {
 	status2 = Pop(&operand2, head);
 	if (status2 != EXIT_SUCCESS)
 	{
-		return -1;
+		return ERROR;
 	}
 
 	status1 = Pop(&operand1, head);
 	if (status1 != EXIT_SUCCESS)
 	{
-		return -2;
+		return ERROR;
 	}
 	switch (operacija)
 	{
@@ -175,7 +175,6 @@ int Pop(double* br, position head)
 	position prvi = head->next;
 	if (!prvi)
 	{
-		printf("Postfix not valid! Please check your file\n");
 		return ERROR;
 	}
 	*br = prvi->broj;
