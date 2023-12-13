@@ -80,6 +80,7 @@ int main()
 Position createElement(int element, Position root)
 {
 	root = (Position)malloc(sizeof(Tree));
+	//provjera alokacije memorije
 	root->element = element;
 	root->left = NULL;
 	root->right = NULL;
